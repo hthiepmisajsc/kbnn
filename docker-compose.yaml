@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+    oracle:
+        image: epiclabs/docker-oracle-xe-11g
+        restart: always
+        ports:
+            - 1521:1521
+        environment:
+            ORACLE_ALLOW_REMOTE: "true"
+            ORACLE_PASSWORD: "12345678"
+            RELAX_SECURITY: 1
